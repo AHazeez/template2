@@ -1710,3 +1710,52 @@ body.payment-popup-open {
   opacity: 1;
   transform: translateY(0);
 }
+.navbar {
+  height: 85px;
+}
+
+.navbar__inner {
+  max-width: 1400px;
+  padding: 0 24px;
+  gap: 1rem;
+}
+
+.navbar__logo-img {
+  width: 60px;
+  height: 60px;
+}
+
+.navbar__logo-main {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.navbar__logo-sub {
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.navbar__link-group {
+  gap: 28px;
+}
+
+.navbar__link {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.navbar__actions {
+  gap: 12px;
+}
+
+.navbar__cta {
+  min-width: 130px;
+  height: 46px;
+  padding: 0 20px;
+  font-size: 12px;
+}
+
+.navbar__cta--pay {
+  min-width: 120px;
+}
