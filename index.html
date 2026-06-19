@@ -29,19 +29,23 @@
       <a href="index.html" class="navbar__logo" aria-label="TGV Worldwide Holidays Home">
         <img src="assets/images/tgv-logo.jpeg" alt="TGV Logo" class="navbar__logo-img">
         <div class="navbar__logo-text">
-          <span class="navbar__logo-main">TGV Worldwide</span>
-          <span class="navbar__logo-sub">Holidays Pvt. Ltd.</span>
+          <span class="navbar__logo-main">TGV Worldwide Holidays Pvt. Ltd.</span>
+          <span class="navbar__logo-sub">Premier Luxury Travel Boutique</span>
         </div>
       </a>
       <div class="navbar__links" role="menubar">
-        <a href="index.html" class="navbar__link" role="menuitem">Home</a>
-        <a href="about.html" class="navbar__link" role="menuitem">About TGV</a>
-        <a href="destinations.html" class="navbar__link" role="menuitem">Destinations</a>
-        <a href="experiences.html" class="navbar__link" role="menuitem">Experiences</a>
-        <a href="gallery.html" class="navbar__link" role="menuitem">Gallery</a>
-        <a href="contact.html" class="navbar__link" role="menuitem">Contact</a>
-        <a href="contact.html" class="navbar__link navbar__cta" role="menuitem" id="nav-cta">Plan My Journey</a>
-        <a href="#" class="navbar__link navbar__cta" role="menuitem" id="nav-cta">Pay Now</a>
+        <div class="navbar__link-group" aria-label="Site pages">
+          <a href="index.html" class="navbar__link" role="menuitem">Home</a>
+          <a href="about.html" class="navbar__link" role="menuitem">About Us</a>
+          <a href="destinations.html" class="navbar__link" role="menuitem">Destinations</a>
+          <a href="experiences.html" class="navbar__link" role="menuitem">Experiences</a>
+          <a href="gallery.html" class="navbar__link" role="menuitem">Gallery</a>
+          <a href="contact.html" class="navbar__link" role="menuitem">Contact</a>
+        </div>
+        <div class="navbar__actions" aria-label="Primary actions">
+          <a href="contact.html" class="navbar__link navbar__cta" role="menuitem" id="nav-cta-plan">Plan My Journey</a>
+          <a href="#" class="navbar__link navbar__cta navbar__cta--pay pay-now-btn" role="menuitem" id="nav-cta-pay">Pay Now</a>
+        </div>
       </div>
       <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
@@ -55,13 +59,13 @@
   <!-- MOBILE MENU -->
   <div class="navbar__mobile-menu" id="mobile-menu" role="menu" aria-label="Mobile navigation">
     <a href="index.html" class="navbar__mobile-link" role="menuitem">Home</a>
-    <a href="about.html" class="navbar__mobile-link" role="menuitem">About TGV</a>
+    <a href="about.html" class="navbar__mobile-link" role="menuitem">About Us</a>
     <a href="destinations.html" class="navbar__mobile-link" role="menuitem">Destinations</a>
     <a href="experiences.html" class="navbar__mobile-link" role="menuitem">Experiences</a>
     <a href="gallery.html" class="navbar__mobile-link" role="menuitem">Gallery</a>
     <a href="contact.html" class="navbar__mobile-link" role="menuitem">Contact</a>
     <a href="contact.html" class="navbar__mobile-cta" role="menuitem">Plan My Journey</a>
-    <a href="#" class="navbar__mobile-cta" role="menuitem">Pay Now</a>
+    <a href="#" class="navbar__mobile-cta pay-now-btn" role="menuitem">Pay Now</a>
   </div>
 
   <!-- MAIN CONTENT -->
@@ -82,7 +86,7 @@
 
         <div class="fade-in" style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-bottom:4rem;">
           <a href="contact.html" class="btn btn--secondary btn--lg">Plan My Journey</a>
-          <a href="#" class="btn btn--secondary btn--lg">Pay Now</a>
+          <a href="#" class="btn btn--secondary btn--lg pay-now-btn">Pay Now</a>
           <a href="destinations.html" class="btn btn--outline btn--lg">Explore Destinations</a>
         </div>
 
@@ -409,6 +413,42 @@
     </section>
 
     <!-- ================================================
+         PAYMENT POPUP
+         ================================================ -->
+    <div class="payment-popup" id="payment-popup" aria-hidden="true">
+      <div class="payment-dialog" role="dialog" aria-modal="true" aria-labelledby="demo-payment-heading">
+        <button class="payment-dialog__close" type="button" id="payment-popup-close" aria-label="Close payment form">&times;</button>
+        <div class="payment-dialog__header">
+          <span class="payment-dialog__eyebrow">Demo Payment Entry</span>
+          <h2 id="demo-payment-heading">Enter Booking Details</h2>
+          <p>This demo form appears when any Pay Now button is clicked.</p>
+        </div>
+        <form class="payment-form" id="demo-payment-form">
+          <div class="form-group">
+            <label for="demo-booking-id">Booking ID</label>
+            <input type="text" id="demo-booking-id" placeholder="TGV-2026-001" required>
+          </div>
+          <div class="form-group">
+            <label for="demo-guest-name">Guest Name</label>
+            <input type="text" id="demo-guest-name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="demo-email">Email</label>
+              <input type="email" id="demo-email" placeholder="name@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="demo-amount">Amount</label>
+              <input type="text" id="demo-amount" placeholder="INR 50,000" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Continue Demo Payment</button>
+          <p class="payment-dialog__note" id="demo-payment-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- ================================================
          CTA BANNER
          ================================================ -->
     <section class="cta-banner" aria-label="Call to action">
@@ -417,7 +457,7 @@
         <p class="cta-banner__text">Let our expert travel designers craft a bespoke itinerary that exceeds every expectation.</p>
         <div class="cta-banner__actions">
           <a href="contact.html" class="btn btn--secondary btn--lg">Plan My Journey</a>
-          <a href="#" class="btn btn--secondary btn--lg">Pay Now</a>
+          <a href="#" class="btn btn--secondary btn--lg pay-now-btn">Pay Now</a>
           <a href="customize-journey.html" class="btn btn--outline btn--lg">Customize My Trip</a>
         </div>
       </div>
@@ -468,7 +508,7 @@
           <p style="font-size:0.85rem; margin-bottom:0.5rem; color:rgba(255,255,255,0.55);">📞 +91 98765 43210</p>
           <p style="font-size:0.85rem; margin-bottom:1.5rem; color:rgba(255,255,255,0.55);">✉ hello@tgvworldwide.com</p>
           <a href="contact.html" class="btn btn--secondary" style="width:100%; text-align:center;">Plan My Journey</a>
-          <a href="#" class="btn btn--secondary" style="width:100%; text-align:center;">Pay Now</a>
+          <a href="#" class="btn btn--secondary pay-now-btn" style="width:100%; text-align:center;">Pay Now</a>
         </div>
       </div>
       <div class="footer__bottom">

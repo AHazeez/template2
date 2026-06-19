@@ -21,7 +21,7 @@
   --radius:            4px;
   --transition:        0.3s ease;
   --container-max:     1280px;
-  --nav-h:             80px;
+  --nav-h:             90px;
   --shadow-sm:         0 2px 8px rgba(0,0,0,0.08);
   --shadow-md:         0 4px 20px rgba(0,0,0,0.12);
   --shadow-lg:         0 8px 40px rgba(0,0,0,0.16);
@@ -104,18 +104,22 @@ p {
   top: 0; left: 0; right: 0;
   z-index: 1000;
   height: var(--nav-h);
-  transition: background var(--transition), box-shadow var(--transition);
+  background: rgba(255,255,255,0.82);
+  border-bottom: 1px solid rgba(200,169,106,0.24);
+  box-shadow: 0 14px 40px rgba(31, 22, 38, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: background var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .navbar.scrolled {
-  background: rgba(91, 26, 138, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-md);
+  background: rgba(255,255,255,0.94);
+  border-color: rgba(91,26,138,0.16);
+  box-shadow: 0 16px 46px rgba(31, 22, 38, 0.14);
 }
 
 .navbar.solid {
-  background: var(--color-primary);
+  background: rgba(255,255,255,0.96);
 }
 
 .navbar__inner {
@@ -123,78 +127,114 @@ p {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  padding: 0 2rem;
-  max-width: var(--container-max);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  padding: 0 clamp(1.5rem, 3vw, 3.5rem);
+  max-width: 1800px;
   margin: 0 auto;
 }
 
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.95rem;
   text-decoration: none;
   flex-shrink: 0;
+  min-width: 0;
 }
 
 .navbar__logo-img {
-  width: 52px;
-  height: 52px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(255,255,255,0.3);
+  border: 2px solid rgba(200,169,106,0.72);
+  box-shadow: 0 0 0 4px rgba(91,26,138,0.08), 0 6px 18px rgba(23,82,60,0.12);
 }
 
 .navbar__logo-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
+  justify-content: center;
+  line-height: 1.05;
+  min-width: 0;
 }
 
 .navbar__logo-main {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--color-primary);
+  white-space: nowrap;
 }
 
 .navbar__logo-sub {
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
+  margin-top: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.65);
-  font-weight: 500;
+  color: #2f5f45;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: space-between;
+  gap: clamp(1.5rem, 2vw, 2.5rem);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.navbar__link-group,
+.navbar__actions {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__link-group {
+  justify-content: center;
+  gap: clamp(40px, 2.65vw, 50px);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.navbar__actions {
+  gap: 0.85rem;
+  flex: 0 0 auto;
 }
 
 .navbar__link {
-  font-size: 0.8rem;
+  font-family: var(--font-sans);
+  font-size: 16px;
   font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
-  transition: color var(--transition);
+  letter-spacing: 0;
+  color: #242126;
+  transition: color var(--transition), transform var(--transition);
   position: relative;
+  white-space: nowrap;
 }
 
 .navbar__link::after {
   content: '';
   position: absolute;
-  bottom: -4px; left: 0;
+  bottom: -10px; left: 50%;
   width: 0; height: 1px;
   background: var(--color-secondary);
+  transform: translateX(-50%);
   transition: width var(--transition);
 }
 
-.navbar__link:hover,
-.navbar__link.active {
+.navbar__link:hover {
   color: var(--color-secondary);
+  transform: translateY(-1px);
+}
+
+.navbar__link.active {
+  color: var(--color-primary);
 }
 
 .navbar__link:hover::after,
@@ -205,21 +245,43 @@ p {
 .navbar__cta {
   background: var(--color-secondary);
   color: #1a0a00 !important;
-  padding: 0.6rem 1.4rem;
-  font-size: 0.75rem;
+  min-width: 150px;
+  height: 50px;
+  padding: 0 1.3rem;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  transition: background var(--transition), transform var(--transition);
-  border-radius: var(--radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-secondary);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(200,169,106,0.2);
+  transition: background var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .navbar__cta:hover {
   background: #ffffff;
-  transform: translateY(-1px);
+  color: var(--color-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(200,169,106,0.28);
 }
 
 .navbar__cta::after { display: none; }
+
+.navbar__cta--pay {
+  background: transparent;
+  color: var(--color-primary) !important;
+  border: 1px solid var(--color-secondary);
+  box-shadow: none;
+}
+
+.navbar__cta--pay:hover {
+  background: var(--color-secondary);
+  color: #1a0a00 !important;
+  box-shadow: 0 12px 28px rgba(200,169,106,0.26);
+}
 
 .navbar__hamburger {
   display: none;
@@ -234,7 +296,7 @@ p {
   display: block;
   width: 26px;
   height: 2px;
-  background: #ffffff;
+  background: var(--color-primary);
   transition: all var(--transition);
   border-radius: 2px;
 }
@@ -521,6 +583,143 @@ p {
 .btn--lg {
   padding: 1rem 2.5rem;
   font-size: 0.85rem;
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* ===================================
+   PAYMENT FORM
+   =================================== */
+.payment-form {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.payment-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.payment-form label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.payment-form input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-fg);
+}
+
+.payment-form input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(91,26,138,0.1);
+}
+
+.payment-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.payment-form .btn {
+  margin-top: 0.5rem;
+}
+
+.payment-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 8, 12, 0.72);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  z-index: 2000;
+}
+
+.payment-popup.show {
+  display: flex;
+}
+
+.payment-dialog {
+  position: relative;
+  width: min(560px, 100%);
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 2.25rem;
+}
+
+.payment-dialog__close {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(91,26,138,0.08);
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.payment-dialog__close:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.payment-dialog__header {
+  margin-bottom: 1.5rem;
+  padding-right: 2.25rem;
+}
+
+.payment-dialog__eyebrow {
+  display: block;
+  margin-bottom: 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.payment-dialog__header h2 {
+  margin-bottom: 0.6rem;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+}
+
+.payment-dialog__header p,
+.payment-dialog__note {
+  font-size: 0.92rem;
+}
+
+.payment-dialog__note {
+  min-height: 1.5rem;
+  margin-top: 1rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+body.payment-popup-open {
+  overflow: hidden;
 }
 
 /* ===================================

@@ -296,6 +296,64 @@
 // ===================================
 // HERO SEARCH FORM (index.html)
 // ===================================
+(function initPaymentPopup() {
+  const payNowButtons = document.querySelectorAll('.pay-now-btn');
+  const paymentPopup = document.getElementById('payment-popup');
+  const closeBtn = document.getElementById('payment-popup-close');
+  const demoForm = document.getElementById('demo-payment-form');
+  const status = document.getElementById('demo-payment-status');
+
+  function openPopup() {
+    paymentPopup.classList.add('show');
+    paymentPopup.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('payment-popup-open');
+    document.getElementById('demo-booking-id')?.focus();
+  }
+
+  function closePopup() {
+    paymentPopup.classList.remove('show');
+    paymentPopup.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('payment-popup-open');
+  }
+
+  if (payNowButtons.length > 0 && paymentPopup) {
+    payNowButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        openPopup();
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closePopup);
+
+    paymentPopup.addEventListener('click', (e) => {
+      if (e.target === paymentPopup) {
+        closePopup();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && paymentPopup.classList.contains('show')) closePopup();
+    });
+
+    if (demoForm) {
+      demoForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const btn = demoForm.querySelector('[type="submit"]');
+        const originalText = btn.textContent;
+        btn.textContent = 'Opening Demo...';
+        btn.disabled = true;
+        if (status) status.textContent = '';
+
+        setTimeout(function () {
+          btn.textContent = originalText;
+          btn.disabled = false;
+          if (status) status.textContent = 'Demo payment form submitted successfully.';
+        }, 900);
+      });
+    }
+  }
+})();
 (function initHeroSearch() {
   const searchForm = document.getElementById('hero-search');
   if (!searchForm) return;
@@ -316,7 +374,9 @@
 // ===================================
 document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
   anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
+    const href = this.getAttribute('href');
+    if (!href || href === '#') return;
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       const offset = 100;

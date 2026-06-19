@@ -23,23 +23,28 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar solid" id="navbar" role="navigation" aria-label="Main navigation">
+    <nav class="navbar solid" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="navbar__inner">
       <a href="index.html" class="navbar__logo" aria-label="TGV Worldwide Holidays Home">
         <img src="assets/images/tgv-logo.jpeg" alt="TGV Logo" class="navbar__logo-img">
         <div class="navbar__logo-text">
-          <span class="navbar__logo-main">TGV Worldwide</span>
-          <span class="navbar__logo-sub">Holidays Pvt. Ltd.</span>
+          <span class="navbar__logo-main">TGV Worldwide Holidays Pvt. Ltd.</span>
+          <span class="navbar__logo-sub">Premier Luxury Travel Boutique</span>
         </div>
       </a>
       <div class="navbar__links" role="menubar">
-        <a href="index.html" class="navbar__link" role="menuitem">Home</a>
-        <a href="about.html" class="navbar__link" role="menuitem">About TGV</a>
-        <a href="destinations.html" class="navbar__link" role="menuitem">Destinations</a>
-        <a href="experiences.html" class="navbar__link" role="menuitem">Experiences</a>
-        <a href="gallery.html" class="navbar__link active" role="menuitem">Gallery</a>
-        <a href="contact.html" class="navbar__link" role="menuitem">Contact</a>
-        <a href="contact.html" class="navbar__link navbar__cta" role="menuitem" id="nav-cta">Plan My Journey</a>
+        <div class="navbar__link-group" aria-label="Site pages">
+          <a href="index.html" class="navbar__link" role="menuitem">Home</a>
+          <a href="about.html" class="navbar__link" role="menuitem">About Us</a>
+          <a href="destinations.html" class="navbar__link" role="menuitem">Destinations</a>
+          <a href="experiences.html" class="navbar__link" role="menuitem">Experiences</a>
+          <a href="gallery.html" class="navbar__link active" role="menuitem">Gallery</a>
+          <a href="contact.html" class="navbar__link" role="menuitem">Contact</a>
+        </div>
+        <div class="navbar__actions" aria-label="Primary actions">
+          <a href="contact.html" class="navbar__link navbar__cta" role="menuitem">Plan My Journey</a>
+          <a href="payment.html" class="navbar__link navbar__cta navbar__cta--pay" role="menuitem">Pay Now</a>
+        </div>
       </div>
       <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
@@ -53,12 +58,13 @@
   <!-- MOBILE MENU -->
   <div class="navbar__mobile-menu" id="mobile-menu" role="menu" aria-label="Mobile navigation">
     <a href="index.html" class="navbar__mobile-link" role="menuitem">Home</a>
-    <a href="about.html" class="navbar__mobile-link" role="menuitem">About TGV</a>
+    <a href="about.html" class="navbar__mobile-link" role="menuitem">About Us</a>
     <a href="destinations.html" class="navbar__mobile-link" role="menuitem">Destinations</a>
     <a href="experiences.html" class="navbar__mobile-link" role="menuitem">Experiences</a>
     <a href="gallery.html" class="navbar__mobile-link active" role="menuitem">Gallery</a>
     <a href="contact.html" class="navbar__mobile-link" role="menuitem">Contact</a>
     <a href="contact.html" class="navbar__mobile-cta" role="menuitem">Plan My Journey</a>
+    <a href="payment.html" class="navbar__mobile-cta" role="menuitem">Pay Now</a>
   </div>
 
   <main id="main-content">
@@ -289,3 +295,6 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
