@@ -123,28 +123,29 @@ p {
 }
 
 .navbar__inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  justify-content: space-between;
   height: 100%;
-  gap: clamp(1.5rem, 3vw, 3rem);
-  padding: 0 clamp(1.5rem, 3vw, 3.5rem);
-  max-width: 1800px;
+  column-gap: 1rem;
+  padding: 0 2rem;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: 0.95rem;
+  justify-self: start;
+  gap: 0.85rem;
   text-decoration: none;
   flex-shrink: 0;
   min-width: 0;
 }
 
 .navbar__logo-img {
-  width: 68px;
-  height: 68px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(200,169,106,0.72);
@@ -161,7 +162,7 @@ p {
 
 .navbar__logo-main {
   font-family: var(--font-serif);
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   letter-spacing: 0;
   color: var(--color-primary);
@@ -169,11 +170,11 @@ p {
 }
 
 .navbar__logo-sub {
-  margin-top: 0.4rem;
+  margin-top: 0.3rem;
   font-family: var(--font-sans);
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: #2f5f45;
   font-weight: 600;
@@ -181,35 +182,33 @@ p {
 }
 
 .navbar__links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: clamp(1.5rem, 2vw, 2.5rem);
-  flex: 1 1 auto;
-  min-width: 0;
+  display: contents;
 }
 
 .navbar__link-group,
 .navbar__actions {
   display: flex;
   align-items: center;
-}
-
-.navbar__link-group {
-  justify-content: center;
-  gap: clamp(40px, 2.65vw, 50px);
-  flex: 1 1 auto;
   min-width: 0;
 }
 
+.navbar__link-group {
+  grid-column: 2;
+  justify-content: center;
+  gap: 28px;
+  white-space: nowrap;
+}
+
 .navbar__actions {
-  gap: 0.85rem;
-  flex: 0 0 auto;
+  grid-column: 3;
+  justify-self: end;
+  gap: 0.7rem;
+  white-space: nowrap;
 }
 
 .navbar__link {
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0;
   color: #242126;
@@ -245,10 +244,10 @@ p {
 .navbar__cta {
   background: var(--color-secondary);
   color: #1a0a00 !important;
-  min-width: 150px;
-  height: 50px;
-  padding: 0 1.3rem;
-  font-size: 13px;
+  min-width: 118px;
+  height: 44px;
+  padding: 0 1rem;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -256,7 +255,7 @@ p {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--color-secondary);
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 8px 20px rgba(200,169,106,0.2);
   transition: background var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
