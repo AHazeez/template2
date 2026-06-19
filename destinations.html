@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations — TGV Worldwide Holidays</title>
+  <meta name="description" content="Explore TGV's curated portfolio of world-class luxury destinations — from the Maldives to Japan, Switzerland to Bali.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Luxury Destinations — TGV Worldwide Holidays">
+  <meta property="og:description" content="Explore our curated portfolio of world-class luxury destinations.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/maldives.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Luxury Destinations — TGV Worldwide Holidays">
+  <meta name="twitter:description" content="Explore our curated portfolio of world-class luxury destinations.">
+  <link rel="icon" type="image/jpeg" href="assets/images/tgv-logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar solid" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="TGV Worldwide Holidays Home">
+        <img src="assets/images/tgv-logo.jpeg" alt="TGV Logo" class="navbar__logo-img">
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-main">TGV Worldwide</span>
+          <span class="navbar__logo-sub">Holidays Pvt. Ltd.</span>
+        </div>
+      </a>
+      <div class="navbar__links" role="menubar">
+        <a href="index.html" class="navbar__link" role="menuitem">Home</a>
+        <a href="about.html" class="navbar__link" role="menuitem">About TGV</a>
+        <a href="destinations.html" class="navbar__link active" role="menuitem">Destinations</a>
+        <a href="experiences.html" class="navbar__link" role="menuitem">Experiences</a>
+        <a href="gallery.html" class="navbar__link" role="menuitem">Gallery</a>
+        <a href="contact.html" class="navbar__link" role="menuitem">Contact</a>
+        <a href="contact.html" class="navbar__link navbar__cta" role="menuitem" id="nav-cta">Plan My Journey</a>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="navbar__overlay" id="nav-overlay" role="presentation"></div>
+
+  <!-- MOBILE MENU -->
+  <div class="navbar__mobile-menu" id="mobile-menu" role="menu" aria-label="Mobile navigation">
+    <a href="index.html" class="navbar__mobile-link" role="menuitem">Home</a>
+    <a href="about.html" class="navbar__mobile-link" role="menuitem">About TGV</a>
+    <a href="destinations.html" class="navbar__mobile-link active" role="menuitem">Destinations</a>
+    <a href="experiences.html" class="navbar__mobile-link" role="menuitem">Experiences</a>
+    <a href="gallery.html" class="navbar__mobile-link" role="menuitem">Gallery</a>
+    <a href="contact.html" class="navbar__mobile-link" role="menuitem">Contact</a>
+    <a href="contact.html" class="navbar__mobile-cta" role="menuitem">Plan My Journey</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Destinations Hero">
+      <img src="assets/images/maldives.png" alt="Maldives overwater villa at sunset" class="page-hero__bg">
+      <div class="page-hero__overlay"></div>
+      <div class="page-hero__content">
+        <div class="page-hero__eyebrow">Portfolio</div>
+        <h1 class="page-hero__title">Iconic Destinations</h1>
+        <p class="page-hero__subtitle">Explore our hand-curated portfolio of the world's most breathtaking locations.</p>
+      </div>
+    </section>
+
+    <!-- FILTER + DESTINATIONS -->
+    <section class="section section--bg" aria-labelledby="destinations-heading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Explore the World</span>
+          <h2 class="section__title" id="destinations-heading">All Destinations</h2>
+          <p class="section__desc">85+ destinations expertly curated for extraordinary luxury travelers.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="dest-filter" role="group" aria-label="Filter destinations by region">
+          <button class="dest-filter__btn active" data-filter="all" id="filter-all">All</button>
+          <button class="dest-filter__btn" data-filter="asia" id="filter-asia">Asia</button>
+          <button class="dest-filter__btn" data-filter="europe" id="filter-europe">Europe</button>
+          <button class="dest-filter__btn" data-filter="middleeast" id="filter-middleeast">Middle East</button>
+          <button class="dest-filter__btn" data-filter="oceania" id="filter-oceania">Oceania</button>
+        </div>
+
+        <!-- Destinations Grid -->
+        <div class="grid-4" role="list" aria-label="Destination cards">
+
+          <div class="dest-card-wrap" data-region="asia" role="listitem">
+            <a href="contact.html?destination=Maldives" class="dest-card fade-in" aria-label="Maldives — enquire now">
+              <img src="assets/images/maldives.png" alt="Maldives overwater villas" class="dest-card__img">
+              <div class="dest-card__overlay"></div>
+              <div class="dest-card__content">
+                <h3 class="dest-card__name">Maldives</h3>
+                <span class="dest-card__sub">Explore →</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="dest-card-wrap" data-region="europe" role="listitem">
+            <a href="contact.html?destination=Switzerland" class="dest-card fade-in" aria-label="Switzerland — enquire now">
+              <img src="assets/images/switzerland.png" alt="Switzerland alpine scenery" class="dest-card__img">
+              <div class="dest-card__overlay"></div>
+              <div class="dest-card__content">
+                <h3 class="dest-card__name">Switzerland</h3>
+                <span class="dest-card__sub">Explore →</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="dest-card-wrap" data-region="asia" role="listitem">
+            <a href="contact.html?destination=Bali" class="dest-card fade-in" aria-label="Bali — enquire now">
+              <img src="assets/images/bali.png" alt="Bali tropical paradise" class="dest-card__img">
+              <div class="dest-card__overlay"></div>
+              <div class="dest-card__content">
+                <h3 class="dest-card__name">Bali</h3>
+                <span class="dest-card__sub">Explore →</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="dest-card-wrap" data-region="middleeast" role="listitem">
+            <a href="contact.html?destination=Dubai" class="dest-card fade-in" aria-label="Dubai — enquire now">
+              <img src="assets/images/dubai.png" alt="Dubai skyline and architecture" class="dest-card__img">
+              <div class="dest-card__overlay"></div>
+              <div class="dest-card__content">
+                <h3 class="dest-card__name">Dubai</h3>
+                <span class="dest-card__sub">Explore →</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="dest-card-wrap" data-region="europe" role="listitem">
+            <a href="contact.html?destination=Italy" class="dest-card fade-in" aria-label="Italy — enquire now">
+              <img src="assets/images/italy.png" alt="Italy Amalfi coast and countryside" class="dest-card__img">
+              <div class="dest-card__overlay"></div>
+              <div class="dest-card__content">
+                <h3 class="dest-card__name">Italy</h3>
+                <span class="dest-card__sub">Explore →</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="dest-card-wrap" data-region="asia" role="listitem">
+            <a href="contact.html?destination=Japan" class="dest-card fade-in" aria-label="Japan — enquire now">
+              <img src="assets/images/japan.png" alt="Japan cherry blossom and temples" class="dest-card__img">
+              <div class="dest-card__overlay"></div>
+              <div class="dest-card__content">
+                <h3 class="dest-card__name">Japan</h3>
+                <span class="dest-card__sub">Explore →</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="dest-card-wrap" data-region="europe" role="listitem">
+            <a href="contact.html?destination=Greece" class="dest-card fade-in" aria-label="Greece — enquire now">
+              <img src="assets/images/greece.png" alt="Greece Santorini blue domes" class="dest-card__img">
+              <div class="dest-card__overlay"></div>
+              <div class="dest-card__content">
+                <h3 class="dest-card__name">Greece</h3>
+                <span class="dest-card__sub">Explore →</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="dest-card-wrap" data-region="middleeast" role="listitem">
+            <a href="contact.html?destination=Turkey" class="dest-card fade-in" aria-label="Turkey — enquire now">
+              <img src="assets/images/turkey.png" alt="Turkey Cappadocia hot air balloons" class="dest-card__img">
+              <div class="dest-card__overlay"></div>
+              <div class="dest-card__content">
+                <h3 class="dest-card__name">Turkey</h3>
+                <span class="dest-card__sub">Explore →</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY TRAVEL WITH TGV -->
+    <section class="section section--card" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Our Promise</span>
+          <h2 class="section__title" id="why-heading">Why Book With TGV</h2>
+          <p class="section__desc">Every destination we feature has been personally vetted by our team of expert travel designers.</p>
+        </div>
+        <div class="grid-3">
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon">🏨</div>
+            <h3 class="feature-card__title">Handpicked Properties</h3>
+            <p style="font-size:0.88rem;">We personally visit and vet every hotel, villa, and resort in our portfolio — no compromises on quality.</p>
+            <div class="feature-card__line"></div>
+          </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon">🗺️</div>
+            <h3 class="feature-card__title">Local Expert Access</h3>
+            <p style="font-size:0.88rem;">Exclusive local guides, private transfers, and insider access at every destination across the globe.</p>
+            <div class="feature-card__line"></div>
+          </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon">✈️</div>
+            <h3 class="feature-card__title">Best Fare Guarantee</h3>
+            <p style="font-size:0.88rem;">Business and first-class flight bookings at the best available rates through our airline partnerships.</p>
+            <div class="feature-card__line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner" aria-label="Call to action">
+      <div class="container" style="position:relative; z-index:1;">
+        <h2 class="cta-banner__title">Your Dream Destination Awaits</h2>
+        <p class="cta-banner__text">Tell us where you want to go and let our designers craft the perfect itinerary around your vision.</p>
+        <div class="cta-banner__actions">
+          <a href="contact.html" class="btn btn--secondary btn--lg">Plan My Journey</a>
+          <a href="customize-journey.html" class="btn btn--outline btn--lg">Customize My Trip</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">
+            <img src="assets/images/tgv-logo.jpeg" alt="TGV Logo" class="footer__logo">
+            <span class="footer__brand-text">TGV Worldwide</span>
+          </div>
+          <p class="footer__tagline">A premier luxury travel boutique dedicated to designing highly personalized, transformative journeys for discerning travelers worldwide.</p>
+          <div class="footer__social" role="list" aria-label="Social media links">
+            <a href="#" class="footer__social-link" role="listitem" aria-label="Facebook">f</a>
+            <a href="#" class="footer__social-link" role="listitem" aria-label="Instagram">in</a>
+            <a href="#" class="footer__social-link" role="listitem" aria-label="Twitter">tw</a>
+            <a href="#" class="footer__social-link" role="listitem" aria-label="LinkedIn">li</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <a href="index.html" class="footer__link">Home</a>
+          <a href="about.html" class="footer__link">About TGV</a>
+          <a href="destinations.html" class="footer__link">Destinations</a>
+          <a href="experiences.html" class="footer__link">Experiences</a>
+          <a href="gallery.html" class="footer__link">Gallery</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </div>
+        <div>
+          <h4 class="footer__heading">Destinations</h4>
+          <a href="destinations.html" class="footer__link">Maldives</a>
+          <a href="destinations.html" class="footer__link">Switzerland</a>
+          <a href="destinations.html" class="footer__link">Bali</a>
+          <a href="destinations.html" class="footer__link">Dubai</a>
+          <a href="destinations.html" class="footer__link">Italy</a>
+          <a href="destinations.html" class="footer__link">Japan</a>
+        </div>
+        <div>
+          <h4 class="footer__heading">Contact Us</h4>
+          <p style="font-size:0.85rem; margin-bottom:0.5rem; color:rgba(255,255,255,0.55);">📍 Mumbai, India</p>
+          <p style="font-size:0.85rem; margin-bottom:0.5rem; color:rgba(255,255,255,0.55);">📞 +91 98765 43210</p>
+          <p style="font-size:0.85rem; margin-bottom:1.5rem; color:rgba(255,255,255,0.55);">✉ hello@tgvworldwide.com</p>
+          <a href="contact.html" class="btn btn--secondary" style="width:100%; text-align:center;">Plan My Journey</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024 TGV Worldwide Holidays Pvt. Ltd. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__bottom-link">Privacy Policy</a>
+          <a href="#" class="footer__bottom-link">Terms of Service</a>
+          <a href="#" class="footer__bottom-link">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

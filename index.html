@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TGV Worldwide Holidays — Luxury Travel Boutique</title>
+  <meta name="description" content="TGV Worldwide Holidays is a premier luxury travel boutique designing highly personalized, transformative journeys for discerning travelers across the globe.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="TGV Worldwide Holidays — Luxury Travel Boutique">
+  <meta property="og:description" content="Curated luxury journeys crafted for extraordinary travelers. Discover the world with TGV Worldwide Holidays.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TGV Worldwide Holidays">
+  <meta name="twitter:description" content="Curated luxury journeys crafted for extraordinary travelers.">
+  <link rel="icon" type="image/jpeg" href="assets/images/tgv-logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="TGV Worldwide Holidays Home">
+        <img src="assets/images/tgv-logo.jpeg" alt="TGV Logo" class="navbar__logo-img">
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-main">TGV Worldwide</span>
+          <span class="navbar__logo-sub">Holidays Pvt. Ltd.</span>
+        </div>
+      </a>
+      <div class="navbar__links" role="menubar">
+        <a href="index.html" class="navbar__link" role="menuitem">Home</a>
+        <a href="about.html" class="navbar__link" role="menuitem">About TGV</a>
+        <a href="destinations.html" class="navbar__link" role="menuitem">Destinations</a>
+        <a href="experiences.html" class="navbar__link" role="menuitem">Experiences</a>
+        <a href="gallery.html" class="navbar__link" role="menuitem">Gallery</a>
+        <a href="contact.html" class="navbar__link" role="menuitem">Contact</a>
+        <a href="contact.html" class="navbar__link navbar__cta" role="menuitem" id="nav-cta">Plan My Journey</a>
+        <a href="#" class="navbar__link navbar__cta" role="menuitem" id="nav-cta">Pay Now</a>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="navbar__overlay" id="nav-overlay" role="presentation"></div>
+
+  <!-- MOBILE MENU -->
+  <div class="navbar__mobile-menu" id="mobile-menu" role="menu" aria-label="Mobile navigation">
+    <a href="index.html" class="navbar__mobile-link" role="menuitem">Home</a>
+    <a href="about.html" class="navbar__mobile-link" role="menuitem">About TGV</a>
+    <a href="destinations.html" class="navbar__mobile-link" role="menuitem">Destinations</a>
+    <a href="experiences.html" class="navbar__mobile-link" role="menuitem">Experiences</a>
+    <a href="gallery.html" class="navbar__mobile-link" role="menuitem">Gallery</a>
+    <a href="contact.html" class="navbar__mobile-link" role="menuitem">Contact</a>
+    <a href="contact.html" class="navbar__mobile-cta" role="menuitem">Plan My Journey</a>
+    <a href="#" class="navbar__mobile-cta" role="menuitem">Pay Now</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- ================================================
+         HERO SECTION
+         ================================================ -->
+    <section class="hero" aria-label="Hero" style="position:relative; height:100dvh; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+      <div style="position:absolute; inset:0; z-index:0;">
+        <img src="assets/images/hero.png" alt="Luxury Maldives Overwater Villas" style="width:100%; height:100%; object-fit:cover;">
+        <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(91,26,138,0.45) 0%, rgba(0,0,0,0.65) 100%);"></div>
+      </div>
+      <div class="container" style="position:relative; z-index:10; text-align:center; padding-top:var(--nav-h);">
+        <p class="fade-in" style="font-size:0.7rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--color-secondary); font-weight:700; margin-bottom:1.25rem;">Premier Luxury Travel Boutique</p>
+        <h1 class="fade-in" style="color:#ffffff; text-shadow:0 2px 20px rgba(0,0,0,0.4); margin-bottom:1.25rem;">Travel Beyond<br>Expectations</h1>
+        <p class="fade-in" style="color:rgba(255,255,255,0.8); font-size:1.05rem; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:3rem; max-width:600px; margin-left:auto; margin-right:auto;">Curated Luxury Journeys Crafted For Extraordinary Travelers</p>
+
+        <div class="fade-in" style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-bottom:4rem;">
+          <a href="contact.html" class="btn btn--secondary btn--lg">Plan My Journey</a>
+          <a href="#" class="btn btn--secondary btn--lg">Pay Now</a>
+          <a href="destinations.html" class="btn btn--outline btn--lg">Explore Destinations</a>
+        </div>
+
+        <!-- Hero Search Bar -->
+        <div class="fade-in" style="max-width:860px; margin:0 auto; background:rgba(255,255,255,0.1); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.2); border-radius:var(--radius); padding:1.5rem;">
+          <form id="hero-search" style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr auto; gap:1rem; align-items:end;" aria-label="Travel search">
+            <div>
+              <label style="display:block; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:0.4rem;">Destination</label>
+              <input id="search-dest" type="text" placeholder="Where to?" style="width:100%; background:transparent; border:0; border-bottom:1px solid rgba(255,255,255,0.35); padding:0.6rem 0; color:#fff; font-family:var(--font-sans); font-size:0.9rem;" aria-label="Destination">
+            </div>
+            <div>
+              <label style="display:block; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:0.4rem;">Travel Date</label>
+              <input type="date" style="width:100%; background:transparent; border:0; border-bottom:1px solid rgba(255,255,255,0.35); padding:0.6rem 0; color:#fff; font-family:var(--font-sans); font-size:0.9rem; color-scheme:dark;" aria-label="Travel date">
+            </div>
+            <div>
+              <label style="display:block; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:0.4rem;">Guests</label>
+              <input type="number" placeholder="2" min="1" style="width:100%; background:transparent; border:0; border-bottom:1px solid rgba(255,255,255,0.35); padding:0.6rem 0; color:#fff; font-family:var(--font-sans); font-size:0.9rem;" aria-label="Number of guests">
+            </div>
+            <div>
+              <label style="display:block; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:0.4rem;">Travel Style</label>
+              <select style="width:100%; background:transparent; border:0; border-bottom:1px solid rgba(255,255,255,0.35); padding:0.6rem 0; color:#fff; font-family:var(--font-sans); font-size:0.9rem;" aria-label="Travel style">
+                <option value="" style="color:#333">Select Style</option>
+                <option value="luxury" style="color:#333">Luxury</option>
+                <option value="honeymoon" style="color:#333">Honeymoon</option>
+                <option value="family" style="color:#333">Family</option>
+                <option value="corporate" style="color:#333">Corporate</option>
+                <option value="adventure" style="color:#333">Adventure</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn--secondary" style="padding:0.7rem 1.5rem; white-space:nowrap;">Inquire</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div style="position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); z-index:10; display:flex; flex-direction:column; align-items:center; gap:0.4rem;">
+        <span style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.5);">Scroll</span>
+        <div style="width:1px; height:40px; background:linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);"></div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         STATS ROW
+         ================================================ -->
+    <section aria-label="Statistics" style="background:var(--color-card);">
+      <div class="container">
+        <div class="stats-row">
+          <div class="stat-item fade-in">
+            <div class="stat-item__number">15+</div>
+            <div class="stat-item__label">Years Experience</div>
+          </div>
+          <div class="stat-item fade-in">
+            <div class="stat-item__number">5000+</div>
+            <div class="stat-item__label">Happy Travelers</div>
+          </div>
+          <div class="stat-item fade-in">
+            <div class="stat-item__number">85+</div>
+            <div class="stat-item__label">Destinations</div>
+          </div>
+          <div class="stat-item fade-in">
+            <div class="stat-item__number">500+</div>
+            <div class="stat-item__label">Luxury Partners</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         ABOUT SNIPPET
+         ================================================ -->
+    <section class="section section--card" aria-label="About TGV">
+      <div class="container">
+        <div class="about-split">
+          <div class="about-img-wrapper fade-in">
+            <img src="assets/images/interior.png" alt="TGV Worldwide Holidays Luxury Office">
+          </div>
+          <div class="fade-in">
+            <span class="about-content__eyebrow">About Us</span>
+            <h2 class="about-content__title">Redefining the <em style="color:var(--color-primary);">Art of Travel</em></h2>
+            <div class="divider"></div>
+            <p class="about-content__text">TGV Worldwide Holidays is a premier luxury travel boutique based in India, dedicated to designing highly personalized, transformative journeys for discerning travelers. We believe that true luxury lies in exclusive access, impeccable service, and moments that money simply cannot buy.</p>
+            <p class="about-content__text">From securing private islands in the Maldives to curating culinary tours through Tuscany with Michelin-starred chefs, our expertise ensures every detail is flawlessly executed.</p>
+            <div style="margin-top:2rem;">
+              <a href="about.html" class="btn btn--outline-dark">Discover Our Story</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         WHY CHOOSE TGV
+         ================================================ -->
+    <section class="section section--bg" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Our Promise</span>
+          <h2 class="section__title" id="why-heading">Why Choose TGV</h2>
+          <p class="section__desc">The hallmarks of our service that elevate your journey from exceptional to unforgettable.</p>
+        </div>
+        <div class="grid-4">
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon">✦</div>
+            <h3 class="feature-card__title">Personalized Itineraries</h3>
+            <p style="font-size:0.88rem;">Every journey uniquely tailored to your preferences, pace, and passions.</p>
+            <div class="feature-card__line"></div>
+          </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon">🏨</div>
+            <h3 class="feature-card__title">Luxury Accommodations</h3>
+            <p style="font-size:0.88rem;">Handpicked stays at world's finest hotels, private villas and resorts.</p>
+            <div class="feature-card__line"></div>
+          </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon">👔</div>
+            <h3 class="feature-card__title">Dedicated Travel Experts</h3>
+            <p style="font-size:0.88rem;">Your personal travel advisor available throughout your journey.</p>
+            <div class="feature-card__line"></div>
+          </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon">📋</div>
+            <h3 class="feature-card__title">Visa Assistance</h3>
+            <p style="font-size:0.88rem;">Comprehensive visa guidance and documentation support worldwide.</p>
+            <div class="feature-card__line"></div>
+          </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon">✈️</div>
+            <h3 class="feature-card__title">Flight Management</h3>
+            <p style="font-size:0.88rem;">Business &amp; first-class bookings with best fare guarantees.</p>
+            <div class="feature-card__line"></div>
+          </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon">🚐</div>
+            <h3 class="feature-card__title">Private Transfers</h3>
+            <p style="font-size:0.88rem;">Chauffeur-driven luxury vehicles at every destination.</p>
+            <div class="feature-card__line"></div>
+          </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon">🔔</div>
+            <h3 class="feature-card__title">24/7 Concierge</h3>
+            <p style="font-size:0.88rem;">Round-the-clock support no matter where in the world you are.</p>
+            <div class="feature-card__line"></div>
+          </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon">⭐</div>
+            <h3 class="feature-card__title">Exclusive Experiences</h3>
+            <p style="font-size:0.88rem;">Private tours, closed events and access no one else can offer.</p>
+            <div class="feature-card__line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         ICONIC DESTINATIONS
+         ================================================ -->
+    <section class="section section--card" aria-labelledby="destinations-heading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Portfolio</span>
+          <h2 class="section__title" id="destinations-heading">Iconic Destinations</h2>
+          <p class="section__desc">Explore our carefully curated portfolio of the world's most breathtaking locations.</p>
+        </div>
+        <div class="grid-4">
+          <div class="dest-card fade-in" role="img" aria-label="Maldives destination">
+            <img src="assets/images/maldives.png" alt="Maldives overwater villas" class="dest-card__img">
+            <div class="dest-card__overlay"></div>
+            <div class="dest-card__content">
+              <h3 class="dest-card__name">Maldives</h3>
+              <span class="dest-card__sub">Explore →</span>
+            </div>
+          </div>
+          <div class="dest-card fade-in" role="img" aria-label="Switzerland destination">
+            <img src="assets/images/switzerland.png" alt="Switzerland alpine scenery" class="dest-card__img">
+            <div class="dest-card__overlay"></div>
+            <div class="dest-card__content">
+              <h3 class="dest-card__name">Switzerland</h3>
+              <span class="dest-card__sub">Explore →</span>
+            </div>
+          </div>
+          <div class="dest-card fade-in" role="img" aria-label="Bali destination">
+            <img src="assets/images/bali.png" alt="Bali tropical paradise" class="dest-card__img">
+            <div class="dest-card__overlay"></div>
+            <div class="dest-card__content">
+              <h3 class="dest-card__name">Bali</h3>
+              <span class="dest-card__sub">Explore →</span>
+            </div>
+          </div>
+          <div class="dest-card fade-in" role="img" aria-label="Dubai destination">
+            <img src="assets/images/dubai.png" alt="Dubai skyline" class="dest-card__img">
+            <div class="dest-card__overlay"></div>
+            <div class="dest-card__content">
+              <h3 class="dest-card__name">Dubai</h3>
+              <span class="dest-card__sub">Explore →</span>
+            </div>
+          </div>
+          <div class="dest-card fade-in" role="img" aria-label="Italy destination">
+            <img src="assets/images/italy.png" alt="Italy Amalfi coast" class="dest-card__img">
+            <div class="dest-card__overlay"></div>
+            <div class="dest-card__content">
+              <h3 class="dest-card__name">Italy</h3>
+              <span class="dest-card__sub">Explore →</span>
+            </div>
+          </div>
+          <div class="dest-card fade-in" role="img" aria-label="Japan destination">
+            <img src="assets/images/japan.png" alt="Japan cherry blossoms" class="dest-card__img">
+            <div class="dest-card__overlay"></div>
+            <div class="dest-card__content">
+              <h3 class="dest-card__name">Japan</h3>
+              <span class="dest-card__sub">Explore →</span>
+            </div>
+          </div>
+          <div class="dest-card fade-in" role="img" aria-label="Greece destination">
+            <img src="assets/images/greece.png" alt="Greece Santorini" class="dest-card__img">
+            <div class="dest-card__overlay"></div>
+            <div class="dest-card__content">
+              <h3 class="dest-card__name">Greece</h3>
+              <span class="dest-card__sub">Explore →</span>
+            </div>
+          </div>
+          <div class="dest-card fade-in" role="img" aria-label="Turkey destination">
+            <img src="assets/images/turkey.png" alt="Turkey Cappadocia" class="dest-card__img">
+            <div class="dest-card__overlay"></div>
+            <div class="dest-card__content">
+              <h3 class="dest-card__name">Turkey</h3>
+              <span class="dest-card__sub">Explore →</span>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a href="destinations.html" class="btn btn--outline-dark">View All Destinations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         CURATED EXPERIENCES
+         ================================================ -->
+    <section class="section section--bg" aria-labelledby="exp-heading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Experiences</span>
+          <h2 class="section__title" id="exp-heading">Curated Experiences</h2>
+        </div>
+        <div class="experience-grid">
+          <div class="exp-item exp-item--large fade-in">
+            <img src="assets/images/honeymoon.jpg" alt="Luxury Honeymoon" class="exp-item__img">
+            <div class="exp-item__overlay"></div>
+            <div class="exp-item__label">Luxury Honeymoon</div>
+          </div>
+          <div class="exp-item fade-in">
+            <img src="assets/images/family.jpg" alt="Family Holidays" class="exp-item__img">
+            <div class="exp-item__overlay"></div>
+            <div class="exp-item__label">Family Holidays</div>
+          </div>
+          <div class="exp-item fade-in">
+            <img src="assets/images/adventure.jpg" alt="Adventure Travel" class="exp-item__img">
+            <div class="exp-item__overlay"></div>
+            <div class="exp-item__label">Adventure Travel</div>
+          </div>
+          <div class="exp-item fade-in">
+            <img src="assets/images/corporate.jpg" alt="Corporate Retreats" class="exp-item__img">
+            <div class="exp-item__overlay"></div>
+            <div class="exp-item__label">Corporate Retreats</div>
+          </div>
+          <div class="exp-item exp-item--large fade-in">
+            <img src="assets/images/interior.png" alt="Private Escapes" class="exp-item__img">
+            <div class="exp-item__overlay"></div>
+            <div class="exp-item__label">Private Escapes</div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a href="experiences.html" class="btn btn--outline-dark">Explore All Experiences</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         TESTIMONIALS
+         ================================================ -->
+    <section class="section section--card" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Testimonials</span>
+          <h2 class="section__title" id="testimonials-heading">What Our Travelers Say</h2>
+          <p class="section__desc">Real experiences from the extraordinary people we have had the privilege of serving.</p>
+        </div>
+        <div class="grid-3">
+          <div class="testimonial-card fade-in">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">"TGV planned our honeymoon in the Maldives to absolute perfection. Every detail was thoughtful and the private villa they arranged was beyond our wildest dreams."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">P</div>
+              <div>
+                <div class="testimonial-card__name">Priya &amp; Rahul Sharma</div>
+                <div class="testimonial-card__location">Mumbai, India · Maldives Honeymoon</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card fade-in">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">"Our family trip across Europe was seamlessly organised. The kids loved every moment and we as parents could actually relax knowing TGV had everything covered."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">A</div>
+              <div>
+                <div class="testimonial-card__name">Anita Mehrotra</div>
+                <div class="testimonial-card__location">Delhi, India · European Family Tour</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card fade-in">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">"The corporate retreat to Bali organized by TGV was a landmark event for our team. Professional, seamless, and absolutely luxurious in every sense."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">V</div>
+              <div>
+                <div class="testimonial-card__name">Vikram Nair</div>
+                <div class="testimonial-card__location">Bangalore, India · Corporate Bali Retreat</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         CTA BANNER
+         ================================================ -->
+    <section class="cta-banner" aria-label="Call to action">
+      <div class="container" style="position:relative; z-index:1;">
+        <h2 class="cta-banner__title">Begin Your Extraordinary Journey</h2>
+        <p class="cta-banner__text">Let our expert travel designers craft a bespoke itinerary that exceeds every expectation.</p>
+        <div class="cta-banner__actions">
+          <a href="contact.html" class="btn btn--secondary btn--lg">Plan My Journey</a>
+          <a href="#" class="btn btn--secondary btn--lg">Pay Now</a>
+          <a href="customize-journey.html" class="btn btn--outline btn--lg">Customize My Trip</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">
+            <img src="assets/images/tgv-logo.jpeg" alt="TGV Logo" class="footer__logo">
+            <span class="footer__brand-text">TGV Worldwide</span>
+          </div>
+          <p class="footer__tagline">A premier luxury travel boutique dedicated to designing highly personalized, transformative journeys for discerning travelers worldwide.</p>
+          <div class="footer__social" role="list" aria-label="Social media links">
+            <a href="#" class="footer__social-link" role="listitem" aria-label="Facebook">f</a>
+            <a href="#" class="footer__social-link" role="listitem" aria-label="Instagram">in</a>
+            <a href="#" class="footer__social-link" role="listitem" aria-label="Twitter">tw</a>
+            <a href="#" class="footer__social-link" role="listitem" aria-label="LinkedIn">li</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <a href="index.html" class="footer__link">Home</a>
+          <a href="about.html" class="footer__link">About TGV</a>
+          <a href="destinations.html" class="footer__link">Destinations</a>
+          <a href="experiences.html" class="footer__link">Experiences</a>
+          <a href="gallery.html" class="footer__link">Gallery</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </div>
+        <div>
+          <h4 class="footer__heading">Destinations</h4>
+          <a href="destinations.html" class="footer__link">Maldives</a>
+          <a href="destinations.html" class="footer__link">Switzerland</a>
+          <a href="destinations.html" class="footer__link">Bali</a>
+          <a href="destinations.html" class="footer__link">Dubai</a>
+          <a href="destinations.html" class="footer__link">Italy</a>
+          <a href="destinations.html" class="footer__link">Japan</a>
+        </div>
+        <div>
+          <h4 class="footer__heading">Contact Us</h4>
+          <p style="font-size:0.85rem; margin-bottom:0.5rem; color:rgba(255,255,255,0.55);">📍 Mumbai, India</p>
+          <p style="font-size:0.85rem; margin-bottom:0.5rem; color:rgba(255,255,255,0.55);">📞 +91 98765 43210</p>
+          <p style="font-size:0.85rem; margin-bottom:1.5rem; color:rgba(255,255,255,0.55);">✉ hello@tgvworldwide.com</p>
+          <a href="contact.html" class="btn btn--secondary" style="width:100%; text-align:center;">Plan My Journey</a>
+          <a href="#" class="btn btn--secondary" style="width:100%; text-align:center;">Pay Now</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024 TGV Worldwide Holidays Pvt. Ltd. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__bottom-link">Privacy Policy</a>
+          <a href="#" class="footer__bottom-link">Terms of Service</a>
+          <a href="#" class="footer__bottom-link">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
